@@ -77,7 +77,7 @@ Ensure you have the following installed:
    Open your browser and navigate to `http://localhost:3000`.
 
 
-   ##Screenshots:
+   ## Screenshots:
   
    ![image](https://github.com/user-attachments/assets/adc685a8-d8a9-4d36-9719-fb90fd0c00f9)
 
