@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container py-5">
+        <div id="property-details" class="row">
+            <!-- Property details will be dynamically added here -->
+        </div>
+    </div>
+
+    <script>
+      const properties = [
+        {
+          id: 1,
+          title: "Golden Urban House For Sell",
+          price: "$12,345",
+          type: "Apartment",
+          location: "123 Street, New York, USA",
+          image: "img/property-1.jpg",
+          bedrooms: 3,
+          bathrooms: 2,
+          size: "1000 Sqft",
+          description: "A beautiful urban house with a modern design."
+        },
+        {
+          id: 2,
+          title: "Luxury Villa",
+          price: "$25,000",
+          type: "Villa",
+          location: "456 Avenue, Los Angeles, USA",
+          image: "img/property-2.jpg",
+          bedrooms: 4,
+          bathrooms: 3,
+          size: "2000 Sqft",
+          description: "A luxury villa with stunning views."
+        },
+        // Add more properties as needed
+      ];
+
+      function displayPropertyDetails() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const propertyId = parseInt(urlParams.get('id'));
+        const property = properties.find(p => p.id === propertyId);
+
+        if (!property) {
+          document.getElementById('property-details').innerHTML = '<h3>Property not found</h3>';
+          return;
+        }
+
+        document.getElementById('property-details').innerHTML = `
+          <div class="col-md-6">
+            <img class="img-fluid rounded" src="${property.image}" alt="${property.title}">
+          </div>
+          <div class="col-md-6">
+            <h1 class="text-primary">${property.title}</h1>
+            <h3>${property.price}</h3>
+            <p>${property.description}</p>
+            <p><strong>Location:</strong> ${property.location}</p>
+            <p><strong>Type:</strong> ${property.type}</p>
+            <p><strong>Size:</strong> ${property.size}</p>
+            <p><strong>Bedrooms:</strong> ${property.bedrooms}</p>
+            <p><strong>Bathrooms:</strong> ${property.bathrooms}</p>
+          </div>
+        `;
+      }
+
+      displayPropertyDetails();
+    </script>
+</body>
+</html>
