@@ -9,5 +9,3 @@ class User(Base):
     name = Column(String, nullable=False)
     email = Column(String, unique=True, index=True, nullable=False)
     password = Column(String, nullable=False)
-    preferences = relationship('UserPreferences', back_populates='user', cascade='all, delete')
-    activity = relationship('UserActivity', back_populates='user', cascade='all, delete')

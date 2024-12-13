@@ -15,4 +15,3 @@ class Property(Base):
     area = Column(String, nullable=False)
     type = Column(String, nullable=False)
     featured = Column(Boolean, default=False)
-    activity = relationship('UserActivity', back_populates='property', cascade='all, delete')
