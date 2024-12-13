@@ -59,16 +59,10 @@
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         
                         <div class="nav-item dropdown">
-                            <a href="property-list.html" class="nav-link dropdown-toggle" >Listings</a>
+                            <a href="property-list.html" class="nav-link" >Listings</a>
                             
                         </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">Pages</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Error</a>
-                            </div>
-                        </div>
+                       
                       
                     </div>
                     <a href="#" class="btn btn-primary px-3 d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#authModal">Login/Signup</a>
@@ -91,37 +85,41 @@
                                     </ul>
                                     <div class="tab-content mt-3" id="authTabContent">
                                         <!-- Sign In Form -->
-                                        <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
-                                            <form>
+                                        <div class="tab-pane fade" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+                                            <form id="login-form">
                                                 <div class="mb-3">
-                                                    <label for="signinEmail" class="form-label">Email address</label>
-                                                    <input type="email" class="form-control" id="signinEmail" placeholder="Enter your email">
+                                                    <label for="login-username" class="form-label">Username</label>
+                                                    <input type="text" class="form-control" id="login-username" placeholder="Enter your username" required>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="signinPassword" class="form-label">Password</label>
-                                                    <input type="password" class="form-control" id="signinPassword" placeholder="Enter your password">
+                                                    <label for="login-password" class="form-label">Password</label>
+                                                    <input type="password" class="form-control" id="login-password" placeholder="Enter your password" required>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary w-100">Sign In</button>
                                             </form>
                                         </div>
                                         <!-- Sign Up Form -->
-                                        <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
-                                            <form>
+                                        <div class="tab-pane fade show active" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                                            <form id="signup-form">
                                                 <div class="mb-3">
-                                                    <label for="signupName" class="form-label">Full Name</label>
-                                                    <input type="text" class="form-control" id="signupName" placeholder="Enter your full name">
+                                                    <label for="signup-name" class="form-label">Full Name</label>
+                                                    <input type="text" class="form-control" id="signup-name" placeholder="Enter your full name" required>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="signupEmail" class="form-label">Email address</label>
-                                                    <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email">
+                                                    <label for="signup-email" class="form-label">Email address</label>
+                                                    <input type="email" class="form-control" id="signup-email" placeholder="Enter your email" required>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="signupPassword" class="form-label">Password</label>
-                                                    <input type="password" class="form-control" id="signupPassword" placeholder="Create a password">
+                                                    <label for="signup-password" class="form-label">Password</label>
+                                                    <input type="password" class="form-control" id="signup-password" placeholder="Create a password" required>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary w-100">Sign Up</button>
                                             </form>
                                         </div>
+                                    </div>
+                                    
+                                    </div>
+                                    
                                     </div>
                                 </div>
                             </div>
@@ -281,19 +279,12 @@
             </div>
         </div>
         <!-- About End -->
-
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Property Listings</h1>
-                    <p>Discover properties available in your preferred location and within your budget.</p>
-                </div>
-                <div class="row g-4" id="property-list-container">
-                    <!-- Properties will be dynamically injected here -->
-                </div>
-            </div>
-        </div>
-
+       
+            
+        
+                
+            
+        
 
         <!-- Call to Action Start -->
         <div class="container-xxl py-5">
